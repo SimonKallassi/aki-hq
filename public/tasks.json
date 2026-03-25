@@ -1,0 +1,18 @@
+{
+  "inProgress": [
+    { "id": 1, "title": "Aki Industries HQ Build", "agent": "ghabash", "emoji": "🛠️" },
+    { "id": 2, "title": "Enfantillage Polish + Deploy", "agent": "ghabash", "emoji": "🛠️" }
+  ],
+  "backlog": [
+    { "id": 3, "title": "TikTok Auto-Pipeline", "agent": "mira", "emoji": "🎬" },
+    { "id": 4, "title": "Miroplastic CRM", "agent": "omar", "emoji": "📈" },
+    { "id": 5, "title": "Miroplastic SEO Blog", "agent": "layla", "emoji": "✍️" },
+    { "id": 6, "title": "ClawBrowser Build", "agent": "rami", "emoji": "🕸️" }
+  ],
+  "done": [
+    { "id": 7, "title": "10-Agent Team Setup", "agent": "aki", "emoji": "🧞" },
+    { "id": 8, "title": "Enfantillage Full Research + Audit", "agent": "nader", "emoji": "🔎" },
+    { "id": 9, "title": "Enfantillage Website", "agent": "ghabash", "emoji": "🛠️" },
+    { "id": 10, "title": "TikTok Monitor Cron", "agent": "noor", "emoji": "⚙️" }
+  ]
+}
