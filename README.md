@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧞 Aki Industries HQ
 
-## Getting Started
+Internal operations dashboard for Aki Industries.
 
-First, run the development server:
+## What's Inside
+
+**Top half — Pixel Office**
+- 11 animated agents walking around an office floor
+- Each agent has a desk, wanders when idle, types when working
+- Click any character to see their current task
+
+**Bottom half — Mission Control**
+- Three-column task board: Backlog | In Progress | Done
+- Clean dark ops-dashboard aesthetic
+- Task data from `/public/tasks.json` (API integration coming later)
+
+## Tech Stack
+
+- **Next.js 16** (App Router, static export)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** — character animations
+
+## Agents
+
+| Agent | Role |
+|-------|------|
+| Aki 🧞 | CEO / Orchestrator |
+| Ghabash 🛠️ | Engineering |
+| Basma 📋 | Operations |
+| Nader 🔎 | Research |
+| Layla ✍️ | Growth & Content |
+| Rami 🕸️ | Data & Scraping |
+| Mira 🎬 | Media & Creative |
+| Omar 📈 | Sales Systems |
+| Dina 🧭 | Process & SOPs |
+| Sami 🛡️ | QA / Audit |
+| Noor ⚙️ | Automation |
+
+## Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev    # localhost:3000
+npm run build  # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating Tasks
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit `/public/tasks.json` to update the task board. Future: connect to an API.

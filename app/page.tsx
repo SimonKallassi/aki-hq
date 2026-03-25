@@ -1,29 +1,21 @@
+import { readFileSync } from "fs";
+import { join } from "path";
 import { TaskBoard } from "./types";
 import PixelOffice from "./components/PixelOffice";
 import MissionControl from "./components/MissionControl";
 
-async function getTasks(): Promise<TaskBoard> {
-  // In production, this would be an API call
-  // For now, read from static JSON
-  const res = await fetch(
-    process.env.NODE_ENV === "production"
-      ? "https://aki-hq.vercel.app/tasks.json"
-      : "http://localhost:3000/tasks.json",
-    { cache: "no-store" }
-  );
-  if (!res.ok) {
+function getTasks(): TaskBoard {
+  try {
+    const filePath = join(process.cwd(), "public", "tasks.json");
+    const raw = readFileSync(filePath, "utf-8");
+    return JSON.parse(raw) as TaskBoard;
+  } catch {
     return { inProgress: [], backlog: [], done: [] };
   }
-  return res.json();
 }
 
-export default async function HomePage() {
-  let tasks: TaskBoard;
-  try {
-    tasks = await getTasks();
-  } catch {
-    tasks = { inProgress: [], backlog: [], done: [] };
-  }
+export default function HomePage() {
+  const tasks = getTasks();
 
   return (
     <div className="flex flex-col h-screen bg-gray-950 overflow-hidden">
